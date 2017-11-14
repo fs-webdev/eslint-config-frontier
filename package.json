@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config-frontier",
+  "version": "0.0.1",
+  "description": "A common ESLint configuration setup for frontier apps to base off of.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-webdev/eslint-config-frontier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fs-webdev/eslint-config-frontier/issues"
+  },
+  "homepage": "https://github.com/fs-webdev/eslint-config-frontier#readme",
+  "dependencies": {
+    "eslint-plugin-security": "^1.4.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 4"
+  }
+}
