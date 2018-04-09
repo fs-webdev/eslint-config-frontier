@@ -5,5 +5,5 @@ module.exports = {
   env: {
     es6: true
   },
-  extends: ['eslint:recommended', 'frontier/lib/bestPractice', 'frontier/lib/style', 'frontier/lib/custom']
+  extends: ['frontier/bestPractice', 'frontier/possibleErrors', 'frontier/strictMode', 'frontier/variables']
 };
