@@ -1,3 +1,10 @@
+# ATTENTION
+CodeClimate does not currently work with this shared eslint config. They specifically have to whitelist a config for it to
+work on codeclimate. [https://docs.codeclimate.com/docs/eslint#section-supported-plugins](https://docs.codeclimate.com/docs/eslint#section-supported-plugins)
+I (Joey) am currently working on a solution where codeclimate will use the prepare step to fetch the config, but that doesn't
+work with private repos. [https://docs.codeclimate.com/v1.0/docs/configuring-the-prepare-step](https://docs.codeclimate.com/v1.0/docs/configuring-the-prepare-step) 
+So I am ALSO currently trying to get this repo to be allowed to be public, which needs to go through the
+correct channels. It is on my radar, and I am currently working on this.
 # eslint-config-frontier
 
 - A common ESLint configuration for frontier apps to base off of. The rules were gathered and polled from
