@@ -27,19 +27,19 @@ It is important to note that in order for CodeClimate to use this custom config,
               path: "eslint-config-frontier.js"
         ``` 
 2. Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier.js` file that codeclimate will prepare in Step 1.)
-    a. Copy your existing local eslintrc file and rename the copy to .codeclimate.eslintrc.js (or .json or .yml if you are using those filetypes)
-    b. change the `"extends": ["frontier"]` statement to point to the prepared file. `"extends": ["eslint-config-frontier.js"]`
+    1. Copy your existing local eslintrc file and rename the copy to .codeclimate.eslintrc.js (or .json or .yml if you are using those filetypes)  
+    2. Change the `"extends": ["frontier"]` statement to point to the prepared file from Step 1. `"extends": ["eslint-config-frontier.js"]`  
 
 3. Tweak your .codeclimate.yml eslint section to point to the .codeclimate.eslintrc file instead of your default local eslintrc file
-    - Your plugin section in your .codeclimate.yml may be larger and more complicated, but the config: part should point to the new eslintrc file you made in step 2.
-```yaml
-plugins:
-  eslint:
-    channel: eslint-4
-    config: # <- This line, and the line below it are the important lines
-      config: .codeclimate.eslintrc.js # <- this line is important
-      extensions:
-        - .js
-        - .html
-    enabled: true
-```
+    - Your plugin section in your .codeclimate.yml may be larger and more complicated, but the `config:` part should point to the new eslintrc file you made in step 2.
+    ```yaml
+    plugins:
+      eslint:
+        channel: eslint-4
+        config:                              # <- This line and the line below it are the important lines to add/tweak
+          config: .codeclimate.eslintrc.js   # <- this line and the line above it are the important lines to add/tweak
+          extensions:
+            - .js
+            - .html
+        enabled: true
+    ```
