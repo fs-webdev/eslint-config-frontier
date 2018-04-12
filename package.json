@@ -17,9 +17,6 @@
     "url": "https://github.com/fs-webdev/eslint-config-frontier/issues"
   },
   "homepage": "https://github.com/fs-webdev/eslint-config-frontier#readme",
-  "dependencies": {
-    "eslint-plugin-security": "^1.4.0"
-  },
   "peerDependencies": {
     "eslint": ">= 4"
   }
