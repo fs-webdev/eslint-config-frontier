@@ -2,13 +2,6 @@
 In order for codeclimate usage to work, this repo needs to be made public. I (Joey) am working with Gabe and Dan to get this repo
 whitelisted to be made public. You can use the repo locally just fine.
 
-CodeClimate does not currently work with this shared eslint config. They specifically have to whitelist a config for it to
-work on codeclimate. [https://docs.codeclimate.com/docs/eslint#section-supported-plugins](https://docs.codeclimate.com/docs/eslint#section-supported-plugins)
-I (Joey) am currently working on a solution where codeclimate will use the prepare step to fetch the config, but that doesn't
-work with private repos. [https://docs.codeclimate.com/v1.0/docs/configuring-the-prepare-step](https://docs.codeclimate.com/v1.0/docs/configuring-the-prepare-step) 
-So I am ALSO currently trying to get this repo to be allowed to be public, which needs to go through the
-correct channels. It is on my radar, and I am currently working on this.
-
 # eslint-config-frontier
 
 - A common ESLint configuration for frontier apps to base off of. The rules were gathered and polled from
@@ -25,7 +18,7 @@ like to overwrite the rules as you see fit you are free to, but please use your 
 ## CodeClimate Usage
 It is important to note that in order for CodeClimate to use this custom config, we have to work around their limitations a bit.
 
-1. Add a prepare section to your codeclimate that will download this eslint-config file. [Prepare Docs](https://docs.codeclimate.com/docs/configuring-the-prepare-step)
+1. Add a prepare section to your .codeclimate.yml that will download this eslint-config file. [Prepare Docs](https://docs.codeclimate.com/docs/configuring-the-prepare-step)
     - It should look like this 
         ```yaml
         prepare:
@@ -33,17 +26,18 @@ It is important to note that in order for CodeClimate to use this custom config,
             - url: "https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier/master/index.js"
               path: "eslint-config-frontier.js"
         ``` 
-2. Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier.js` file that was prepared)
-Copy your existing local eslintrc file and rename the copy to .codeclimate.eslintrc.js (or .json or .yml if you are using those filetypes)
+2. Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier.js` file that codeclimate will prepare in Step 1.)
+    a. Copy your existing local eslintrc file and rename the copy to .codeclimate.eslintrc.js (or .json or .yml if you are using those filetypes)
+    b. change the `"extends": ["frontier"]` statement to point to the prepared file. `"extends": ["eslint-config-frontier.js"]`
 
-3. Tweak your .codeclimate.yml eslint section to point to a special eslint file instead of your default local eslintrc file
-    - Yours may be larger, but the config: part should point to the new eslintrc file you made in step 2.
+3. Tweak your .codeclimate.yml eslint section to point to the .codeclimate.eslintrc file instead of your default local eslintrc file
+    - Your plugin section in your .codeclimate.yml may be larger and more complicated, but the config: part should point to the new eslintrc file you made in step 2.
 ```yaml
 plugins:
   eslint:
     channel: eslint-4
-    config:
-      config: .codeclimate.eslintrc.js
+    config: # <- This line, and the line below it are the important lines
+      config: .codeclimate.eslintrc.js # <- this line is important
       extensions:
         - .js
         - .html
