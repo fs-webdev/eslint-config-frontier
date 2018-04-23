@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-frontier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A common ESLint configuration setup for frontier apps to base off of.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/fs-webdev/eslint-config-frontier.git"
   },
-  "keywords": ["eslint", "eslint-config"],
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

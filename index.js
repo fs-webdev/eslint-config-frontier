@@ -8,6 +8,7 @@ module.exports = {
   rules: {
     //Best Practice Section
     complexity: ['warn', {max: 8}],
+    curly: ['warn', 'multi-line'],
     'default-case': 'warn',
     'dot-notation': 'warn',
     eqeqeq: 'warn',
