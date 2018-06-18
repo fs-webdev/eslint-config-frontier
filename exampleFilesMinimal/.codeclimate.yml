@@ -1,0 +1,12 @@
+---
+plugins:
+  eslint:
+    channel: eslint-4
+    config:
+      config: .codeclimate.eslintrc.js
+    enabled: true
+prepare:
+  fetch:
+    - url: "https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier/master/index.js"
+      path: "eslint-config-frontier.js"
+version: "2"

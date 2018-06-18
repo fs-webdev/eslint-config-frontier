@@ -1,0 +1,21 @@
+---
+exclude_patterns:
+  - resource/
+  - node_modules/
+  - Session.vim
+  - .git/
+  - views/catalog/bower_components/
+plugins:
+  eslint:
+    channel: eslint-4
+    config:
+      config: .codeclimate.eslintrc.js
+      extensions:
+        - .js
+        - .html
+    enabled: true
+prepare:
+  fetch:
+    - url: "https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier/master/index.js"
+      path: "eslint-config-frontier.js"
+version: "2"
