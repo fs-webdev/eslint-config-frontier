@@ -11,6 +11,21 @@
 1.  Run `npm install fs-webdev/eslint-config-frontier --save-dev`
 2.  Add `"extends": ["frontier"]` to your eslint config.
 
+## Extended Options/Configs
+
+* To support more modular usage of eslint, we have added a very basic eslint config for react and for "es6" code.
+* To use them, you can just add `"extends": ["eslint-config-frontier/es6"]` in your eslint config
+
+### Extended Config Details
+
+#### es6
+The es6 config uses airbnb as a base rule config, and adds prettier/recommended rules on top of it. This also utilizes babel-eslint as the parser
+so eslint will be able to recognize some newer features like objectDestructuring
+
+#### react
+The react config is very basic. It uses the react plugin and extends prettier/react rules.
+Also turns on jsx and experimentalObjectRestSpread parserOptions
+
 ## CodeClimate Usage
 
 It is important to note that in order for CodeClimate to use this custom config, we have to work around their limitations a bit.
