@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['prettier/react'],
+  extends: ['plugin:react/recommended', 'prettier/react'],
   env: {
     browser: true
   },
@@ -9,7 +9,6 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ['react'],
   rules: {
     'react/prop-types': 'off'
   }
