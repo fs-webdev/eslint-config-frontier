@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['react-hooks'],
-  extends: ['plugin:react/recommended', 'prettier/react'],
+  extends: ['prettier/react'],
   env: {
     browser: true
   },

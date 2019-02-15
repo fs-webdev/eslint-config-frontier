@@ -17,7 +17,10 @@ module.exports = {
         singleQuote: true
       }
     ],
+
     'no-console': 'off',
-    'arrow-parens': [1, 'as-needed']
+    'arrow-parens': [1, 'as-needed'],
+    //airbnb has functions true, which is a little overbearing
+    'no-use-before-define': ['error', { functions: false, classes: true, variables: true }]
   }
 };
