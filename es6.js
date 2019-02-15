@@ -18,9 +18,10 @@ module.exports = {
       }
     ],
 
-    'no-console': 'off',
+    //override airbnb overbearing rules
     'arrow-parens': [1, 'as-needed'],
-    //airbnb has functions true, which is a little overbearing
+    'no-console': 'off',
+    'no-param-reassign': ['warn', {props: false}],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }]
   }
 };
