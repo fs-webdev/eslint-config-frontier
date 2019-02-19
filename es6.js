@@ -22,6 +22,7 @@ module.exports = {
     'arrow-parens': [1, 'as-needed'],
     'no-console': 'off',
     'no-param-reassign': ['warn', {props: false}],
-    'no-use-before-define': ['error', { functions: false, classes: true, variables: true }]
+    'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
+    'no-unused-expressions': ['warn', {allowShortCircuit: true}]
   }
 };

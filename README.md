@@ -1,20 +1,18 @@
 # eslint-config-frontier
 
-* A common ESLint configuration for frontier apps to base off of. The rules were gathered and polled from
-  many of the frontend teams, and a concensus was made for this base configuration. If your team would
-  like to overwrite the rules as you see fit you are free to, but please use your best judgement.
-* This config basically covers only eslint rules, but we also set some parserOptions: `{ ecmaVersion: 8 }, env: { es6: true }` by default.
-* You will still probably need to specify additional parserOptions in your eslintrc, like envs of node:true or browser:true, etc.
+* A common ESLint configuration for frontier apps. The base is airbnb's config (a highly used and tested configuration).
 
-## Local Usage
+## Usage
+
+We have an eslint configuration setup for react projects. We HIGHLY recommend you utilize it whenever writing react.
+
+1.  Run `npm install fs-webdev/eslint-config-frontier --save-dev`
+2.  Add `"extends": ["frontier/recommended"]` to your eslint config.
+
+## Old/Deprecated Usage
 
 1.  Run `npm install fs-webdev/eslint-config-frontier --save-dev`
 2.  Add `"extends": ["frontier"]` to your eslint config.
-
-## Extended Options/Configs
-
-* To support more modular usage of eslint, we have added a very basic eslint config for react and for "es6" code.
-* To use them, you can just add `"extends": ["eslint-config-frontier/es6"]` in your eslint config
 
 ### Extended Config Details
 
