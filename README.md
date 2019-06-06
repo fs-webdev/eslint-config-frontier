@@ -1,5 +1,7 @@
 # eslint-config-frontier
 
+### If you are looking for our eslint-config for react, that is located at [eslint-config-frontier-react](https://github.com/fs-webdev/eslint-config-frontier-react)
+
 * A common ESLint configuration for frontier apps to base off of. The rules were gathered and polled from
   many of the frontend teams, and a concensus was made for this base configuration. If your team would
   like to overwrite the rules as you see fit you are free to, but please use your best judgement.
@@ -10,21 +12,6 @@
 
 1.  Run `npm install fs-webdev/eslint-config-frontier --save-dev`
 2.  Add `"extends": ["frontier"]` to your eslint config.
-
-## Extended Options/Configs
-
-* To support more modular usage of eslint, we have added a very basic eslint config for react and for "es6" code.
-* To use them, you can just add `"extends": ["eslint-config-frontier/es6"]` in your eslint config
-
-### Extended Config Details
-
-#### es6
-The es6 config uses airbnb as a base rule config, and adds prettier/recommended rules on top of it. This also utilizes babel-eslint as the parser
-so eslint will be able to recognize some newer features like objectDestructuring
-
-#### react
-The react config is very basic. It uses the react plugin and extends prettier/react rules.
-Also turns on jsx and experimentalObjectRestSpread parserOptions
 
 ## CodeClimate Usage
 
