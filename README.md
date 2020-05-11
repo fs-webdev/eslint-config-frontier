@@ -1,5 +1,10 @@
 # eslint-config-frontier
 
+## NPM Publish Warning
+This repo has a special branch called "artifactory-publish" that publishes to artifactory.
+Any changes to the master branch should be merged into the artifactory-publish branch as
+well as the version bumped so a new version will get published.
+
 ### If you are looking for our eslint-config for react, that is located at [eslint-config-frontier-react](https://github.com/fs-webdev/eslint-config-frontier-react)
 
 - A common ESLint configuration for frontier apps to base off of. The rules were gathered and polled from
