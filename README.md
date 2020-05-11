@@ -10,8 +10,8 @@
 
 ## Local Usage
 
-1.  Run `npm install fs-webdev/eslint-config-frontier --save-dev`
-2.  Add `"extends": ["frontier"]` to your eslint config.
+1.  Run `npm install @fs/eslint-config-frontier --save-dev`
+2.  Add `"extends": ["@fs/eslint-config-frontier"]` to your eslint config.
 
 ### Opt in for linting jsdoc rules
 
@@ -20,8 +20,8 @@ We have a configuration for jsdoc rules that you can use if your team decides th
 1. Add a new entry to the `extends` field of your eslint config.
     ```
     "extends": [
-      "eslint-config-frontier",
-      "eslint-config-frontier/jsdoc"
+      "@fs/eslint-config-frontier",
+      "@fs/eslint-config-frontier/jsdoc"
     ],
     ```
 
@@ -41,7 +41,7 @@ It is important to note that in order for CodeClimate to use this custom config,
 2.  Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier.js` file that codeclimate will prepare in Step 1.)
 
     1.  Copy your existing local eslintrc file and rename the copy to `.codeclimate.eslintrc.js` (or .json or .yml if you are using those filetypes)
-    2.  Change the `"extends": ["frontier"]` statement to point to the prepared file from Step 1. `"extends": ["./eslint-config-frontier.js"]`
+    2.  Change the `"extends": ["@fs/eslint-config-frontier"]` statement to point to the prepared file from Step 1. `"extends": ["./eslint-config-frontier.js"]`
         (only do this in `.codeclimate.eslintrc.js` file, not your normal eslintrc)
         - If you also opt into the jsdoc plugin we provide, you'll also need to add that downloaded file to the extends array
 

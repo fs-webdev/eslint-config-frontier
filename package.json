@@ -24,7 +24,6 @@
     "eslint": ">= 5"
   },
   "dependencies": {
-    "eslint-plugin-jsdoc": "^8.0.1",
-    "joeytestdeleteme": "github:fs-webdev/joeytestdeleteme"
+    "eslint-plugin-jsdoc": "^8.0.1"
   }
 }
