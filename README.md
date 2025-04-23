@@ -1,6 +1,11 @@
-# eslint-config-frontier
+# eslint-config-frontier DEPRECATED
+
+# > [!WARNING]
+
+This was built for the bifrost stack. Do not use in a react stack or newer world.
 
 ## NPM Publish Warning
+
 This repo has a special branch called "artifactory-publish" that publishes to artifactory.
 Any changes to the master branch should be merged into the artifactory-publish branch as
 well as the version bumped so a new version will get published.
@@ -23,12 +28,12 @@ well as the version bumped so a new version will get published.
 We have a configuration for jsdoc rules that you can use if your team decides they want to be more consistent with jsdocs
 
 1. Add a new entry to the `extends` field of your eslint config.
-    ```
-    "extends": [
-      "eslint-config-frontier",
-      "eslint-config-frontier/jsdoc"
-    ],
-    ```
+   ```
+   "extends": [
+     "eslint-config-frontier",
+     "eslint-config-frontier/jsdoc"
+   ],
+   ```
 
 ## CodeClimate Usage
 
