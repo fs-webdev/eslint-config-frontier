@@ -1,6 +1,6 @@
 # eslint-config-frontier DEPRECATED
 
-# > [!WARNING]
+> [!WARNING]
 
 This was built for the bifrost stack. Do not use in a react stack or newer world.
 
